@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Anketa</title>
+  </head>
+  <body>
+      <h1>Заполни анкету</h1>;
+      <script type="text/javascript">
+          var name=prompt('Как вас зовут?','Имя');
+var second_name=prompt('Как ваше отчество?','Отчество');
+var surname=prompt('Как ваша фамилия?','Фамилия');
+var years=prompt('Сколько вам лет','Возраст');
+vozrast_v_dnyah=years*365+years/4|0;
+vozrast_cherez_5_let=parseInt(years)+5;
+var sex=confirm("Ваш пол - мужской?");
+if (sex == true) {
+    sex = "мужской";
+}
+else {
+    sex="женский";
+}
+if ((years>58 &&  sex=="женский")|years>63) {
+	pensia="да";
+}
+
+else {
+	pensia="нет";
+}
+alert("Ваше ФИО: "+name+second_name+surname+"\n"+"Ваш возраст в годах: "+years+"\n"+"Ваш возраст в днях: "+vozrast_v_dnyah+"\n"+"Через 5 лет вам будет: "+vozrast_cherez_5_let+"\n"+"Ваш пол: "+sex+"\n" +"Вы на пенсии: "+pensia);
+      </script>
+    
+  </body>
+</html>

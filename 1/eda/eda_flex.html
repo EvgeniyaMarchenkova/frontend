@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8>
+  <title>Div</title>
+  <style>
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    
+    .salat img {
+      width: 100%;
+    }
+    
+    
+    
+    @media screen and (max-width:600px) {
+      .content {
+        flex-direction: column;
+      }
+      .salat {
+        text-align: center;
+        position: relative;
+      }
+      p,
+      h3 {
+        font-size: 2em;
+      }
+      .salat p {
+        bottom: 100px;
+        position: relative;
+      }
+    }
+    
+    @media screen and (min-width:600px) and (max-width:800px) {
+    
+      .salat {
+        text-align: center;
+        position: relative;
+        width:33%;
+      }
+      .salat p {
+        bottom: 40px;
+        position: relative;
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      p, h3 {
+        font-size: 2em;
+      }
+      .salat {
+        text-align: center;
+        position: relative;
+        width:33%;
+      }
+      .salat p {
+        bottom: 60px;
+        position: relative;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="salat">
+      <h3>Салат греческий</h3>
+      <img src="salat1.jpg"></img>
+      <p>230руб.<span>220г.</span></p>
+    </div>
+    <div class="salat">
+      <h3>Салат Цезарь с курицей</h3>
+      <img src="salat2.jpg"></img>
+      <p>310руб.<span>270г.</span></p>
+    </div>
+    <div class="salat">
+      <h3>Салат с курицей и перцем</h3>
+      <img src="salat3.jpg"></img>
+      <p>270руб.<span>210г.</span></p>
+    </div>
+    <div class="salat">
+      <h3>Салат Цезарь с лососем</h3>
+      <img src="salat4.jpg"></img>
+      <p>390руб.<span>220г.</span></p>
+    </div>
+    <div class="salat">
+      <h3>Салат с бастурмой</h3>
+      <img src="salat5.jpg"></img>
+      <p>290руб.<span>240г.</span></p>
+    </div>
+    <div class="salat">
+      <h3>Суп-крем из порея</h3>
+      <img src="sup.jpg"></img>
+      <p>210руб.<span>220г.</span></p>
+    </div>
+  </div>
+</body>

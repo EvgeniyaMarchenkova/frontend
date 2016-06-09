@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <style type="text/css">
+        .login {
+            display: inline-block;
+            border: 1px solid gray;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        
+        .footer div {
+            text-align: right;
+        }
+        
+        .footer_menu div {
+            display: inline-block;
+        }
+        
+        .magazine {
+            width: 23%;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        
+        .votes {
+            font-size: 0.5em;
+            float: left;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        /*
+        body {
+            width: 1000px;
+        }
+        */
+        
+        .left_menu {
+            width: 25%;
+            float: left;
+        }
+        
+        .left_menu >div {
+            height: 65px;
+            width: 65px;
+            float: left;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        
+        .left_menu img {
+            margin: 6px;
+        }
+        
+        .content_with_menu {
+            width: 75%;
+            float: right;
+        }
+        
+        .content_menu>div {
+            display: inline-table;
+            *
+        }
+        
+        .content>img {
+            width: 100%;
+            padding-top: 10px;
+        }
+        
+        .content {
+            position: relative;
+        }
+        
+        .digit {
+            position: absolute;
+            top: 10px;
+            right: 0;
+        }
+        
+        .digit span {
+            padding: 5px;
+        }
+        
+        .digit {
+            background-color: darkgrey;
+            padding: 5px;
+        }
+        
+        .menu {
+            height: 30px;
+            background: url("seraya_liniya.jpg") repeat;
+        }
+        
+        .menu img {
+            margin: 0 39px;
+        }
+        
+        .search {
+            background: url("logotip.png") no-repeat left;
+            height: 71px;
+            text-align: right;
+            padding: 20px;
+        }
+        
+        .left_column {
+            width: 75%;
+            float: left;
+        }
+        
+        .right_column {
+            width: 25%;
+            float: right;
+        }
+        
+        .borders {
+            border: 1px solid gray;
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        .borders_left {
+            border-left: 1px solid gray;
+        }
+        
+        .borders_top {
+            border-top: 1px solid gray;
+            padding-top: 10px;
+        }
+        
+        .magazine {
+            padding-bottom: 0;
+            padding-right: 0;
+        }
+        
+        .content .borders {
+            margin: 0;
+        }
+        
+        .popular_news * {
+            vertical-align: baseline;
+        }
+        
+        .news img {
+            width: 100%;
+        }
+        
+        .buttons {
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+        
+        button {
+            line-height: 30px;
+            height: 40px;
+            font-size: 0.7em;
+            vertical-align: middle;
+        }
+        
+        .subscribe {
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .footer {
+            background: #1C1C1C;
+            color: white;
+            position: relative;
+        }
+        
+        .footer_menu div {
+            padding: 15px 5px;
+        }
+        
+        .footer input[type="text"] {
+            margin: 20px;
+            height: 30px;
+            background-color: #2E2E2E;
+        }
+        
+        .footer button {
+            height: 29px;
+            position: absolute;
+            top: 23px;
+            left: 180px;
+            background-color: #1C1C1C;
+            color: white;
+            line-height: 2;
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        input[type="radio"]:checked+span {
+            background-color: orange;
+        }
+        
+        .content_description {
+            line-height: 0.5;
+        }
+        
+        .content_description h3 {
+            margin: 0;
+        }
+        
+        .animals {
+            width: 47%;
+            float: left;
+        }
+        
+        .animals div,
+        .news div {
+            font-size: 0.8em;
+            color: gray;
+            line-height: 1.5;
+        }
+        
+        .upcoming_events .news div {
+            padding: 2px;
+        }
+        
+        h6 {
+            margin: 0;
+            font-size: 12px;
+            color: black;
+        }
+        
+        .left {
+            float: left;
+        }
+        
+        .right {
+            float: right;
+            text-align: right;
+        }
+        /*распределяем по ширине*/
+        
+        .content_menu {
+            text-align: justify;
+        }
+        /*делаем, чтобы растягивалось, но не было видно (это такой маленький хак)*/
+        
+        .content_menu:after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="search">
+            <input type="text" value="search">
+            <div class="login">
+                <img src="sign_up.jpg">Sign Up
+                <img src="login.jpg"> login
+            </div>
+        </div>
+        <div class="menu">
+            <img src="home.jpg">
+            <img src="photography.jpg">
+            <img src="video.jpg">
+            <img src="enviroment.jpg">
+            <img src="travel.jpg">
+            <img src="adventure.jpg">
+            <img src="television.jpg">
+            <img src="kids.jpg">
+        </div>
+    </div>
+    <div class="left_column">
+        <div class="left_menu">
+            <div class="borders"><img src="lm1.jpg">
+                <div>Daily News</div>
+            </div>
+            <div class="borders"><img src="lm2.jpg">
+                <div>Magazine</div>
+            </div>
+            <div class="borders"><img src="lm3.jpg">
+                <div>Maps</div>
+            </div>
+            <div class="borders"><img src="lm4.jpg">
+                <div>Science</div>
+            </div>
+            <div class="borders"><img src="lm5.jpg">
+                <div>Education</div>
+            </div>
+            <div class="borders"><img src="lm6.jpg">
+                <div>Games</div>
+            </div>
+            <div class="borders"><img src="lm7.jpg">
+                <div>Events</div>
+            </div>
+            <div class="borders"><img src="lm8.jpg">
+                <div>Blog</div>
+            </div>
+            <div class="borders"><img src="lm9.jpg">
+                <div>Explorers</div>
+            </div>
+            <div class="borders"><img src="lm10.jpg">
+                <div>Trips</div>
+            </div>
+
+        </div>
+        <div class="content_with_menu">
+            <div class="content_menu">
+                <div class="borders">HOME</div>
+                <div class="borders">ANIMALS</div>
+                <div class="borders">ENERGY</div>
+                <div class="borders">ENVIRONMENT</div>
+                <div class="borders">TRAVEL</div>
+
+            </div>
+            <div class="content">
+                <img src="content_menu.jpg">
+                <div class="digit">
+                    <input type="radio" id="picture1" name="menu">
+                    <span><label for="picture1">1</label></span>
+                    <input type="radio" id="picture2" name="menu">
+                    <span><label for="picture2">2</label></span>
+                    <input type="radio" id="picture3" name="menu">
+                    <span><label for="picture3">3</label></span>
+                </div>
+                <div class="content_description borders">
+                    <h4>Lion Cubs Playing</h4> African lion cubs play in the grass in the Okavango Delta
+                </div>
+                <div class="latest_news borders">
+                    <img src="latest_news.jpg">Latest News
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="clear"></div>
+        <div class="animals borders">
+            <div class="animal borders">
+                <img src="image1.jpg">
+                <div class="left">
+                    <h6>African Lion Cub</h6> 3 hour ago
+                </div>
+                <div class="right"><img src="stars.jpg">
+                    <br>1291 votes</div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="animal_description">
+                The lion (Panthera leo) is one of the big cats in the genus Panthera and a member of the family Felidae. The commonly used term African lion collectively denotes the several subspecies found in Africa.
+            </div>
+        </div>
+        <div class="animals borders">
+            <div class="borders">
+                <img src="image2.jpg">
+                <div class="left">
+                    <h6>Young Mountain Gorilla</h6> 3 hour ago
+                </div>
+                <div class="right"><img src="stars.jpg">
+                    <br>1291 votes</div>
+                <div class="clear"></div>
+            </div>
+            <div class="animal_description">
+                Gorillas are ground-dwelling, predominantly herbivorous apes that inhabit the forests of central Africa. The eponymous genus Gorilla is divided into two species: the eastern gorillas and the western gorillas, and either four or five subspecies.
+            </div>
+        </div>
+        <div class="animals borders">
+            <div class="borders">
+                <img src="image3.jpg">
+                <div class="left">
+                    <h6>King Penquins</h6> 3 hour ago
+                </div>
+                <div class="right"><img src="stars.jpg">
+                    <br>1291 votes</div>
+                <div class="clear"></div>
+            </div>
+            <div class="animal_description">
+                The king penguin (Aptenodytes patagonicus) is the second largest species of penguin at 70 to 100 cm tall and weighs 11 to 16 kg (24 to 35 lb). In size it is second only to the emperor penguin.There are two subspecies—A. p. patagonicus and A. p. halli.
+            </div>
+        </div>
+        <div class="animals borders">
+
+            <div class="borders">
+                <img src="image4.jpg">
+                <div class="left">
+                    <h6>King Penquins</h6> 3 hour ago
+                </div>
+                <div class="right"><img src="stars.jpg">
+                    <br>1291 votes</div>
+                <div class="clear"></div>
+            </div>
+            <div class="animal_description">
+                The great white shark (Carcharodon carcharias), also known as the great white, white pointer, white shark, or white death, is a species of large lamniform shark that can be found in the coastal surface waters of all the major oceans.
+            </div>
+        </div>
+    </div>
+    <div class="right_column">
+        <div class="popular_news">
+            <div class="headers borders">
+                <img src="logo_news.jpg">Most Popular News
+            </div>
+            <div class="news borders">
+                <img src="news1.jpg">
+                <div class="left">
+                    <h6>The Bite That Heals</h6> 3 hour ago
+                </div>
+                <div class="right"><img src="stars.jpg">
+                    <br>1291 votes</div>
+                <div class="clear"></div>
+
+            </div>
+            <div class="news borders">
+                <img src="news2.jpg">
+                <div class="left">
+                    <h6>Strangers Than Nature</h6> 4 hour ago
+                </div>
+                <div class="right"><img src="stars.jpg">
+                    <br>1291 votes</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="popular_videos">
+            <div class="headers borders">
+                <img src="logo_video.jpg">Most Popular Video
+
+            </div>
+            <div class="news borders">
+                <img src="videos1.jpg">
+
+            </div>
+            <div class="news borders">
+                <img src="videos2.jpg">
+
+            </div>
+
+        </div>
+        <div class="upcoming_events">
+            <div class="headers borders">
+                <img src="logo_events.jpg">Upcoming Events
+            </div>
+
+            <div class="news borders">
+                <div>
+                    <h6>NatGeo Live Student Matinees</h6></div>
+                <img src="event1.jpg">
+                <div>Live Student ggggggggggggdddddddddd fffffffff f dfgfdgfdg dfgfdgdfg dfgdfgfdgfdg dfgdfgdfg.</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button>
+                <img src="busket.jpg">
+                <span>SHOPPING</span>
+            </button>
+            <button>
+                <img src="busket.jpg">
+                <span>SUBSCRIPTIONS</span>
+            </button>
+
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="magazines ">
+        <div class="headers borders ">
+            <img src="magazines.jpg">National Geographic Magazines
+            <div class="right">
+                <a href="#"><img src="arrow_prev.jpg"></a>
+                <a href="#"><img src="arrow_next.jpg"></a>
+            </div>
+        </div>
+        <div class="magazine borders">
+            <div class="borders">
+                <img src="magazine1.jpg">
+                <br/>Natioonal Geographic Magazine
+            </div>
+            <div class="left"><img src="stars.jpg">
+                <br>1291 votes</div>
+            <div class="subscribe borders_left borders_top right">
+                <a href="#"><img src="subscribe.jpg">SUBSCRIBE</a>
+            </div>
+        </div>
+        <div class="magazine borders">
+            <div class="borders">
+                <img src="magazine2.jpg">
+                <br/>Natioonal Geographic Magazine
+            </div>
+            <div class="left"><img src="stars.jpg">
+                <br>1291 votes</div>
+            <div class="subscribe borders_left borders_top right">
+                <a href="#"><img src="subscribe.jpg">SUBSCRIBE</a>
+            </div>
+        </div>
+        <div class="magazine borders">
+            <div class="borders">
+                <img src="magazine3.jpg">
+                <br/>Natioonal Geographic Magazine
+            </div>
+            <div class="left"><img src="stars.jpg">
+                <br>1291 votes</div>
+            <div class="subscribe borders_left borders_top right">
+                <a href="#"><img src="subscribe.jpg">SUBSCRIBE</a>
+            </div>
+        </div>
+        <div class="magazine borders">
+            <div class="borders">
+                <img src="magazine4.jpg">
+                <br/>Natioonal Geographic Magazine
+            </div>
+            <div class="left"><img src="stars.jpg">
+                <br>1291 votes</div>
+            <div class="subscribe borders_left borders_top right">
+                <a href="#"><img src="subscribe.jpg">SUBSCRIBE</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">
+        <div class="left">
+            <input type="text" size="30" value="type your email">
+            <button>SUBSCRIBE</button>
+        </div>
+        <div class="right">
+            <div class="footer_menu">
+                <div>Customer Servive</div>
+                <div>Advertise With Us</div>
+                <div>Terms of Service</div>
+                <div>Privacy Policy</div>
+            </div>
+
+            <div class="copyright ">
+                <img src="">1996-2013 National Geogrphic Society. All right reserved.
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+
+</body>
+
+</html>

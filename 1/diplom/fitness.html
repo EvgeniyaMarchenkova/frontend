@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset=UTF-8>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style type="text/css">
+        .container nav {
+            background-color: #585858;
+        }
+        
+        .nav>li>a {
+            padding: 10px 10px;
+        }
+        
+        .nav-pills>li>a {
+            color: #fff;
+        }
+        
+        .nav>li>a:focus,
+        .nav>li>a:hover,
+        .price_list * {
+            background-color: #db6561;
+        }
+        
+        .nav-pills>li>a {
+            border-radius: 1px;
+        }
+        
+        .main img, .partner_list img, .trener_list img {
+            width: 100%;
+        }
+        
+        .trener_list img {
+            padding: 5%;
+            position: relative;
+        }
+        
+        .trener_description {
+            width: 70%;
+            position: absolute;
+            left: 35px;
+            bottom: 15px;
+            line-height: 1;
+            color: white;
+            padding: 10px;
+        }
+        
+        .trener_list {
+            background: url("background_trener.jpg") repeat;
+        }
+        
+        .price_list {
+            color: white;
+            font-size: 90%;
+        }
+        
+        .price:first-child {
+            display: inline-block;
+        }
+        
+        .price_list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .price {
+            margin: 0;
+            height: 100%;
+        }
+        
+        .price .glyphicon {
+            margin: 25px 0;
+        }
+        
+        .price span {
+            display: block;
+        }
+        
+        .price_list h2 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-inverse ">
+                <div class="navbar-header navbar-left">
+                    <div class="container-fluid">
+                        <a href=""><img src="logo.png"></a>
+                        <button type="button" data-target="#menu" data-toggle="collapse" class="navbar-toggle">
+
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="menu" class="collapse navbar-collapse navbar-right">
+                    <ul class="nav nav-pills">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Тренеры</a></li>
+                        <li><a href="#">Галерея</a></li>
+                        <li><a href="#">Цены</a></li>
+                        <li><a href="#">Наши преимущества</a></li>
+                        <li><a href="#">Партнеры</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="main">
+                <img src="main.png">
+            </div>
+        </div>
+        <div class="row ">
+            <div class="trener_list">
+                <div class="col-md-3 col-sm-6">
+                    <img src="trener1.jpg">
+                    <div class="trener_description ">
+                        <h4>Макаренко Артем</h4>
+                        <span hidden-md>
+                        Чемпион в абсолютной категории Кубка РБ 2014, действующий член "Международной Ассоциации Тренеров"
+                        </span></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="trener2.jpg">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="trener3.jpg">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="trener4.jpg">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="price_list">
+
+            <div class="row">
+                <h2 class="price_header col-md-12 text-center">Цены</h2>
+                <div class=" col-md-4">
+                    <div class="price col-md-4 col-xs-6 text-center">
+                        <span class="glyphicon glyphicon-pencil "></span>
+                        <span>РАЗОВОЕ ПОСЕЩЕНИЕ</span>
+                        <span>80.000</span>
+                    </div>
+                    <div class="col-md-8 col-xs-6">
+                        <ul>
+                            <li><span class="glyphicon glyphicon-ok"></span> Бесплатная парковка</li>
+                            <li><span class="glyphicon glyphicon-ok"></span> Вода в неограниченном количестве</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> Неограниченное время тренировки</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> Шкафчик с ключом</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-md-4 col-xs-12">
+                    <div class="price col-md-4 col-xs-6 text-center">
+                        <span class="glyphicon glyphicon-send text-center"></span>
+                        <span>АБОНЕМЕНТ НА 12 ПОСЕЩЕНИЙ</span>
+                        <span>840.000</span></div>
+                    <div class="col-md-8 col-xs-6">
+                        <ul>
+                            <li><span class="glyphicon glyphicon-ok"></span> Бесплатная парковка</li>
+                            <li><span class="glyphicon glyphicon-ok"></span> Вода в неограниченном количестве</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> Неограниченное время тренировки</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> Шкафчик с ключом</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> 1 персональная тренировка в подарок</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="price col-md-4 col-xs-6 text-center">
+                        <span class="glyphicon glyphicon-briefcase text-center"></span>
+                        <span>АНЛИМ НА МЕСЯЦ</span>
+                        <span>1.040.000</span>
+                    </div>
+                    <div class="col-md-8 col-xs-6">
+                        <ul>
+                            <li><span class="glyphicon glyphicon-ok"></span> Бесплатная парковка</li>
+                            <li><span class="glyphicon glyphicon-ok"></span> Вода в неограниченном количестве</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> Неограниченное время тренировки</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> Шкафчик с ключом+ полотенце</li>
+                            <li> <span class="glyphicon glyphicon-ok"></span> 2 персональная тренировка в подарок</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantage_list">
+            <div class="row">
+                <h2 class="advantage_header  col-md-12 text-center">IT<span>GYM</span> - сделай свое тело достойным своего духа!</h2>
+                <div class="col-md-3 col-sm-6">
+                    <h6 class="text-center">СИЛОВОЙ ТРЕНИНГ</h6>
+                    <div class="advantage_description ">
+                        Тренажерный зал оборудован тренажерами премиум-класса CYBEX на все группы мышц, самы популярные продуюлированы по 2 или 3 раза
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h6 class="text-center">БОЛЬШАЯ КАРДИОЗОНА</h6>
+                    <div class="advantage_description ">
+                        13 беговых дорожек, 5 эллипсоидов, 2 степпера, 3 велотренажера, 3 ЖК-телевизора</div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h6 class="text-center">БЕСПЛАТНАЯ ВОДА</h6>
+                    <div class="advantage_description ">
+                        Установлена новейшая европейская система очистки и минерализации воды.
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h6 class="text-center">КВАЛИФИЦИРОВАННЫЙ ПЕРСОНАЛ</h6>
+                    <div class="advantage_description ">
+                        Мы подобрали команду настоящих профессианалов, всегда готовых Вам помочь и ответить на любой Ваш вопрос</div>
+                </div>
+            </div>
+        </div>
+        <div class="partner_list hidden-xs">
+            <h2 class="text-center">НАШИ ПАРТНЕРЫ</h2>
+            <div class="partner col-md-3 col-sm-6 ">
+                <img src="partner1.png">
+            </div>
+            <div class="partner col-md-3 col-sm-6  ">
+                <img src="partner2.png">
+            </div>
+            <div class="partner col-md-3 col-sm-6 ">
+                <img src="partner3.png">
+            </div>
+            <div class="partner col-md-3 col-sm-6 ">
+                <img src="partner4.png">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>

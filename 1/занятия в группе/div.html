@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Div</title>
+    <style type="text/css">
+      .main {
+        display:flex;
+        padding:3px;
+        border:1px solid black;
+        justify-content:center;
+        align-items:strech;
+       /* flex-direction:column;*/
+      }
+      
+      .a {
+        background-color:red;
+        flex-grow:0;
+        flex-basis:60px;
+      }
+      .b {
+        background-color:blue;
+        flex-grow:0;
+        flex-basis:60px;
+      }
+      .c {
+        background-color:green;
+        flex-grow:0;
+        order:2;
+        flex-basis:60px;
+      }
+      .d {
+        background-color:yellow;
+         flex-grow:0;
+         order:1;
+         flex-basis:60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" >
+      <div class="a">a<br/><br/></div>
+      <div class="b">b</div>
+      <div class="c">c</div>
+      <div class="d">d</div>
+    </div>
+  </body>
+</html>

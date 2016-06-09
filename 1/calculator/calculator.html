@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <style type="text/css">
+        body {}
+        
+        .calculator {
+            position: absolute;
+            background: black;
+            top: 130px;
+            left: 270px;
+            width: 220px;
+            padding: 15px;
+            text-align: center;
+            
+        }
+        
+        .calculator div.knopka {
+            display: inline-block;
+            background-color: white;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid black;
+            padding: 5px;
+            line-height: 2.1875;
+        }
+        
+        .yellow {
+            background: linear-gradient(to top, orange, yellow, orange);
+            height: 600px;
+            width: 100%;
+        }
+        
+        .blue {
+            height: 600px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #444 50%);
+            width: 100%;
+        }
+        
+        #screen {
+            border-top: 3px solid gray;
+            border-bottom: 3px solid gray;
+            color: white;
+            margin: 11px;
+        }
+        
+        #knopki {
+            padding: 10px 0 30px 0;
+            
+        }
+        
+        
+        
+        .itog {
+            float: right;
+            font-size: 3em;
+            padding:5px;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        #knopki div:nth-child(1), #knopki div:nth-child(2) {
+            background-color: yellow;
+            
+        }
+        
+        .raschet {
+            font-size: 0.8em;
+            float: left;
+            color: yellow;
+            padding:5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yellow">
+        <div class="blue"></div>
+    </div>
+    <div class="calculator">
+        <div id="screen">
+            <div class="itog">16.0</div>
+            <div class="clear"></div>
+            <div class="raschet">8+8=16</div>
+            <div class="clear"></div>
+        </div>
+        <div id="knopki">
+            <div class="knopka ">AC</div>
+            <div class="knopka ">C</div>
+            <div class="knopka">&radic;</div>
+            <div class="knopka">/</div>
+            <div class="knopka">7</div>
+            <div class="knopka">8</div>
+            <div class="knopka">9</div>
+            <div class="knopka">x</div>
+            <div class="knopka">4</div>
+            <div class="knopka">5</div>
+            <div class="knopka">6</div>
+            <div class="knopka">-</div>
+            <div class="knopka">1</div>
+            <div class="knopka">2</div>
+            <div class="knopka">3</div>
+            <div class="knopka">+</div>
+            <div class="knopka">.</div>
+            <div class="knopka">0</div>
+            <div class="knopka">%</div>
+            <div class="knopka">=</div>
+        </div>
+
+    </div>
+
+</html>

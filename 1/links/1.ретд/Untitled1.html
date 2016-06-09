@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <meta charset=UTF-8>
+    <style type="text/css">
+        nav > div {
+            display: inline-block;
+        }
+        
+        .submenu,
+        .subsubmenu {
+            display: none;
+        }
+        
+        input[type=checkbox] {
+            display: none;
+        }
+        
+        #submenu-checkbox:checked + div.submenu {
+            display: block;
+        }
+        
+        #subsubmenu-checkbox:checked + div.subsubmenu {
+            display: block;
+        }
+       
+        .submenu  {
+            position: absolute;
+        } 
+        
+        .subsubmenu  {
+            position: absolute;
+            left: 90px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>Египет</div>
+        <div>Турция</div>
+        <div>Болгария</div>
+        <div>
+            <label for="submenu-checkbox">...</label>
+            <input id="submenu-checkbox" type="checkbox">
+            <div class="submenu">
+                <div>
+                    <label for="subsubmenu-checkbox">Греция</label>
+                    <input id="subsubmenu-checkbox" type="checkbox">
+                    <div class="subsubmenu">
+                        <div>Крит</div>
+                        <div>Родос</div>
+                    </div>
+                </div>
+                <div>Испания</div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

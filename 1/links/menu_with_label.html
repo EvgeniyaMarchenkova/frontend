@@ -58,9 +58,7 @@
             border: none;
         }
         
-        div.clear {
-            clear: both;
-        }
+        
         
         .submenu {
             display: none;
@@ -97,17 +95,18 @@
                 visibility: hidden;
             }
             
-            div *:nth-of-type(4)::before,
-            ul li:nth-of-type(4)::before {
-                content:"...";
-            }
+            
             div *:nth-of-type(5),
             div.list>ul>li:nth-of-type(5) {
                 display: none;
-            } 
-            
-            *:hover>ul.submenu {
-                display: block;
+            }
+            input[type=checkbox] {
+                display: none;
+                
+            }
+            input:checked + p +p {
+                display:block;
+                }
             
             
         }
@@ -134,10 +133,11 @@
                 <td> <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F">Турция</a></td>
                 <td><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></td>
                 <td><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a>
-                    <ul class="submenu">
-                    <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a></li>
-                    <li><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></li>
-                    </ul>
+                    <form name="chekboxes2">
+                      <label for="view_submenu2"/>
+                      <input type="checkbox" name="checkbox2" id="view_submenu2" />
+                      <p class="red">...</p><p class="submenu"><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a><br/><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></p>
+                    </form>
                 </td>
                 <td><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></td>
             </tr>
@@ -149,14 +149,16 @@
         <div><a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F">Турция</a></div>
         <div><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></div>
         <div><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a>
-            <ul class="submenu">
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a></li>
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></li>
-            </ul>
+            <form name="chekboxes1">
+              <label for="view_submenu1"/>
+              <input type="checkbox" name="checkbox1" id="view_submenu1" />
+              <p class="red">...</p><p class="submenu"><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a><br/><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></p>
+            </form>
             </div>
         <div><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></div>
         <div class="clear"></div>
     </div>
+    <div style="clear:both"></div>
     <div class="list">
         <h3>Это список</h3>
         <ul>
@@ -164,10 +166,11 @@
             <li><a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F">Турция</a></li>
             <li><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></li>
             <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a>
-            <ul class="submenu">
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a></li>
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></li>
-            </ul></li>
+            <form name="chekboxes3">
+                      <label for="view_submenu3"/>
+                      <input type="checkbox" name="checkbox3" id="view_submenu3" />
+                      <p class="red">...</p><p class="submenu"><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a><br/><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></p>
+            </form></li>
             <li><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></li>
         </ul>
     </div>
@@ -177,12 +180,11 @@
         <span><a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F">Турция</a></span>
         <span><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></span>
         <span><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a>
-           
-             <ul class="submenu">
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a></li>
-                <li><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></li>
-            </ul>
-            
+            <form name="chekboxes">
+              <label for="view_submenu"/>
+              <input type="checkbox" name="checkbox" id="view_submenu" />
+              <p class="red">...</p><p class="submenu"><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a><br/><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F">Болгария</a></p>
+            </form>
         </span>
         <span><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></span>
     </div>

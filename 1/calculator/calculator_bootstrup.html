@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style type="text/css">
+        body {}
+        
+        .itog {
+            border-top: 2px solid gray;
+            color: white;
+            font-size: 3em;
+        }
+        
+        .raschet {
+            color: yellow;
+            border-bottom: 2px solid gray;
+            font-size: 0.8em;
+        }
+        
+        .knopki {
+            padding: 20px 0;
+        }
+        
+        button {
+            padding: 5px;
+        }
+        
+        .calculator {
+            position: absolute;
+            background: black;
+            top: 130px;
+            left: 200px;
+            width: 220px;
+            padding: 15px;
+        }
+        
+        .yellow {
+            background: linear-gradient(to top, orange, yellow, orange);
+            height: 600px;
+            width: 100%;
+        }
+        
+        .blue {
+            height: 600px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #444 50%);
+            width: 100%;
+        }
+        
+        .knopki button {
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yellow">
+        <div class="blue"></div>
+    </div>
+    <div class="calculator">
+        <div class="container">
+            <div class="itog text-right">16.0</div>
+            <div class="raschet text-left">8+8=16</div>
+        </div>
+        <div class="container">
+            <div class="knopki">
+
+
+                <div class="row">
+                    <button type="button" class="btn btn-default col-xs-3">AC</button>
+                    <button type="button" class="btn btn-default col-xs-3">C</button>
+                    <button type="button" class="btn btn-default col-xs-3">&radic;</button>
+                    <button type="button" class="btn btn-default col-xs-3">/</button>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <button type="button" class="btn btn-default col-xs-3">7</button>
+                <button type="button" class="btn btn-default col-xs-3">8</button>
+                <button type="button" class="btn btn-default col-xs-3">9</button>
+                <button type="button" class="btn btn-default col-xs-3">x</button>
+            </div>
+            <div class="container-fluid">
+                <button type="button" class="btn btn-default col-xs-3">4</button>
+                <button type="button" class="btn btn-default col-xs-3">5</button>
+                <button type="button" class="btn btn-default col-xs-3">6</button>
+                <button type="button" class="btn btn-default col-xs-3">-</button>
+            </div>
+            <div class="container-fluid">
+                <button type="button" class="btn btn-default col-xs-3">1</button>
+                <button type="button" class="btn btn-default col-xs-3">2</button>
+                <button type="button" class="btn btn-default col-xs-3">3</button>
+                <button type="button" class="btn btn-default col-xs-3">+</button>
+            </div>
+            <div class="container-fluid">
+                <button type="button" class="btn btn-default col-xs-3">.</button>
+                <button type="button" class="btn btn-default col-xs-3">0</button>
+                <button type="button" class="btn btn-default col-xs-3">%</button>
+                <button type="button" class="btn btn-default col-xs-3">=</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</html>

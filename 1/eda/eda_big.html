@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <meta charset=UTF-8>
+    <style type="text/css">
+        .clear {
+            clear: both;
+        }
+        
+        #slideshow {
+            overflow:hidden;
+            max-width: 600px;
+            height: 363px;
+            text-align:right;
+            float: left;
+        }
+        
+        #slideshow img {
+            animation-duration: 6s;
+            animation-name: slidein;
+            animation-iteration-count: infinite;
+            
+        }
+        
+        #slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        #slideshow img:nth-child(2) {
+            animation-delay: 4s;
+        }
+        
+        #slideshow img:nth-child(3) {
+            animation-delay: 8s;
+        }
+        
+        @keyframes slidein {
+            0% {
+                margin-left: -100%;
+            }
+            50% {
+                margin-left: 0%;
+            }
+            100% {
+                margin-left: 100%;
+            }
+        }
+        
+        .raspisanie,
+        #slideshow img .kontakt {
+            min-height: 300px;
+        }
+        
+        .eda {
+            text-align: right;
+            padding: 8px;
+        }
+        
+        .eda:hover {
+            transform: scale(1.1);
+        }
+        
+        .eda p,
+        .eda h3 {
+            position: absolute;
+        }
+        
+        .eda p {
+            bottom: -10px;
+        }
+        
+        .container>div.menuItem,
+        .container>.submenuMenu,
+        .show_submenu {
+            font-size: 30px;
+            background: #B40404;
+            /*margin: 5px;*/
+            border-radius: 10px;
+            text-align: center;
+            float: left;
+            width: 31%;
+            z-index: 2;
+        }
+        
+        .container>div {
+            position: relative;
+        }
+        
+        input:checked + div.show_submenu {
+            display: block;
+            position: absolute;
+            background: #B40404;
+        }
+        
+        input:checked + div.menuItem,
+        input.menu_menu:checked ~ div.submenuMenu {
+            background: #610B0B;
+        }
+        
+        input.menu_radio:checked ~ div.content {
+            display: none;
+        }
+        
+        input#kontakt:checked ~ div.kontakt,
+        input#raspisanie:checked ~ div.raspisanie,
+        input#menu_zavtrak:checked ~ div.zavtraki,
+        input#menu_obed:checked ~ div.obedy,
+        input#menu_uzhin:checked ~ div.uzhiny {
+            display: block;
+            width: 100%;
+            position: relative;
+            background: white;
+        }
+        
+        input[type=radio],
+        .raspisanie,
+        .kontakt,
+        .show_submenu,
+        .zavtraki,
+        .obedy,
+        .uzhiny {
+            display: none;
+        }
+        
+        .footer {
+            width: 100%;
+            background: #B40404;
+            margin: 5px;
+            border-radius: 10px;
+            text-align: center;
+            bottom: 5px;
+        }
+        
+        .show_submenu label {
+            display: block;
+        }
+        
+        .show_submenu {
+            width: 100%;
+            z-index: 2;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .eda {
+            float: left;
+            width: 31%;
+            position: relative;
+        }
+        
+        @media screen and (max-width:600px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            .content {
+                order: 1;
+            }
+            .show_raspisanie {
+                order: 2;
+            }
+            .show_kontakt {
+                order: 3;
+            }
+            .show_menu {
+                order: 4;
+            }
+            .container>div.menuItem,
+            .container>.submenuMenu,
+            .show_submenu {
+                width: 100%;
+            }
+            .eda {
+                width: 100%;
+            }
+            p,
+            h3 {
+                font-size: 2em;
+            }
+            .raspisanie,
+            .kontakt {
+                min-height: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <input type="radio" name="menu" value="raspisanie" id="raspisanie" class="menu_radio">
+        <div class="show_raspisanie menuItem">
+            <label for="raspisanie">Расписание</label>
+
+        </div>
+
+        <input type="radio" name="menu" value="kontakt" id="kontakt" class="menu_radio">
+        <div class="show_kontakt menuItem">
+            <label for="kontakt">Контакты</label>
+        </div>
+
+
+        <input type="radio" name="menu" id="menu_zavtrak" class="menu_radio menu_menu">
+        <input type="radio" name="menu" id="menu_obed" class="menu_radio menu_menu">
+        <input type="radio" name="menu" id="menu_uzhin" class="menu_radio menu_menu">
+
+        <div class="show_menu submenuMenu">
+            <label for="show_submenu">Меню</label>
+            <input type="radio" name="menu" value="menu" id="show_submenu">
+            <div class="show_submenu">
+                <label for="menu_zavtrak">Завтраки</label>
+                <label for="menu_obed">Обеды</label>
+                <label for="menu_uzhin">Ужины</label>
+            </div>
+        </div>
+        <div class="clear"><!-- // --></div>
+
+        <div class="zavtraki">
+            <div class="eda">
+                <h3>Завтрак 1</h3>
+                <img src="zavtrak1.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Завтрак 2</h3>
+                <img src="zavtrak2.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Завтрак 3</h3>
+                <img src="zavtrak3.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="clear"></div>
+            <div class="eda">
+                <h3>Завтрак 4</h3>
+                <img src="zavtrak4.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Завтрак 5</h3>
+                <img src="zavtrak5.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Завтрак 6</h3>
+                <img src="zavtrak6.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="obedy">
+            <div class="eda">
+                <h3>Обед 1</h3>
+                <img src="obed_1.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Обед 2</h3>
+                <img src="obed_2.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Обед 3</h3>
+                <img src="obed_3.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="clear"></div>
+            <div class="eda">
+                <h3>Обед 4</h3>
+                <img src="obed_4.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Обед 5</h3>
+                <img src="obed_5.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Обед 6</h3>
+                <img src="obed_6.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+        </div>
+
+        <div class="uzhiny">
+            <div class="eda">
+                <h3>Ужин 1</h3>
+                <img src="uzhin_1.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Ужин 2</h3>
+                <img src="uzhin_2.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Ужин 3</h3>
+                <img src="uzhin_3.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="clear"></div>
+            <div class="eda">
+                <h3>Ужин 4</h3>
+                <img src="uzhin_4.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Ужин 5</h3>
+                <img src="uzhin_5.jpg"></img>
+                <p>230руб.<span>220г.</span></p>
+            </div>
+            <div class="eda">
+                <h3>Ужин 6</h3>
+                <img src="uzhin_6.jpg"></img>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="content">
+            <div id="slideshow">
+                <div id="mask">
+                    <img class="slide" src="slide1.jpg">
+                    <img class="slide" src="slide2.jpg">
+                    <img class="slide" src="slide3.jpg">
+                </div>
+            </div>
+            <div class="text">
+                <p>Ресторан-пивоварня ДРУЗЬЯ - это...	
+КОМФОРТНЫЕ ЗАЛЫ
+
+Залы ресторана подходят для любого события любого формата: конференц-зал для деловых встреч, панорамная стойка для тех, кто хочет быть ближе к артистам на сцене, дружеский баварский, гостеприимный чешский или стильные ирландские залы – для больших и дружных компаний. 
+
+А если вы пришли за уникальными вкусами? – Добро пожаловать в Бар крафтового пива! Летняя терраса и невероятные витражи ждут вас в любом из основных залов ресторана.
+
+БОГАТАЯ КУХНЯ
+
+Основное меню состоит из традиционных блюд пивных стран. Здесь вы найдете как сытные большие блюда, так и легкие закуски и салаты.
+
+Обеденное меню предлагает целый комплекс из первого, второго и приятного комплимента в виде напитка. Также обеденное меню обновляется каждые две недели.
+
+Детское меню – вкусное и полезное, разработано специально для маленьких гостей ресторана.
+
+СВОЯ ПИВОВАРНЯ
+
+Мини пивзавод чешского производства PACOVSCE STROJIRNY с годовой производительностью пива 350 000 литров. На счету ресторана уже 17 марок пива собственного производства.
+
+ 
+ЖИВЫЕ КОНЦЕРТЫ
+
+Качественный звук, профессиональное световое шоу и атмосфера грандиозного праздника от лучших кавер-бэндов города ждет вас каждый день. Также в ресторане проходят концерты для самой разной аудитории: группа «Крематорий», «Несчастный случай», «Uma2rman», «IOWA», «Quest Pistols», певица Линда и другие уже порадовали гостей ресторана и это только начало. 
+
+ЛЕТНИЙ РЕСТОРАН "БИРГАРДЕН"
+
+Пивной сад на 350 посадочных с открытой гриль-кухней, нефильтрованным пивом и живой музыкой – что может быть лучше в жаркий летний денек?
+
+КАРАОКЕ «ДРУЗЬЯ»
+
+Если душа поёт – ей нельзя отказывать! Самое уютное караоке ждет всех любителей микрофона и душевной песни ежедневно  в караоке «ДРУЗЬЯ»!
+
+СВОЯ ТЕРРИТОРИЯ И ПАРКОВКА
+
+Вы на машине, автобусе или велосипеде? - До нас так просто добираться, и так же просто парковаться! А прекрасный вид на Парк Дружбы Народов переносит вас куда-то загород, оставляя при этом вблизи центра Минска.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="raspisanie">
+            ВРЕМЯ РАБОТЫ И РАСПИСАНИЕ Время работы: с 7-00 до 4-00 ежедневно. Завтрак «шведский стол»: с 7-00 до 11-00. Бизнес-ланч: с 12-00 до 16-00 по будням.
+        </div>
+        <div class="kontakt">
+            Контакты пр. Независимости, 11, Минск, Республика Беларусь, 220030 +375 (17) 209-90-62/74/75 (бронирование) +375 (17) 209-91-11 (факс) E-mail: hotelminsk@pmrb.gov.by
+        </div>
+    </div>
+    <div class="footer">Минск, ул. Гикало, 7 • +375 17 280-53-88 • 8044 788-20-20 • Джомалунгма,
+        <br/>© 2007-2015 WOB DESIGN DELIVERED BY TOM@JENSEN.BY
+    </div>
+</body>
+
+</html>

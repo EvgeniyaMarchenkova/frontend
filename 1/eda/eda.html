@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Div</title>
+      <style>
+          img {
+             max-width:100%;
+          }
+          .salat {
+              float:left;
+              margin:20px;
+              position:relative;
+            
+          }
+          .salat span {
+              text-align:right;
+          }
+          h3 {
+              text-align:center;
+          }
+          .salat p {
+              position:relative;
+          }
+          @media screen and (max-width:600px) {
+            .salat {
+              float:none;
+              text-align: center;
+            }
+            img {
+              width:100%;
+            }
+            p, h3 {
+              font-size:2em;
+            }
+            .salat p {
+              bottom:100px;
+            }  
+          }  
+          @media screen and (min-width:600px) and (max-width:800px) {
+            .salat {
+              width:25%;
+            }
+            .salat p {
+              bottom:40px;
+            }  
+          }
+          @media screen and (min-width:800px) {
+            
+            .salat {
+              width:27%;
+            }
+            .salat p {
+              bottom:50px;
+            }  
+          }
+          
+      </style>
+  </head>
+  <body>
+      <div class="salat">
+          <h3>Салат греческий</h3>
+          <img src="salat1.jpg" ></img>
+          <p>230руб.<span>220г.</span></p>
+      </div>
+      <div class="salat">
+          <h3>Салат Цезарь с курицей</h3>
+          <img src="salat2.jpg"></img>
+          <p>310руб.<span>270г.</span></p>
+      </div>
+      <div class="salat">
+          <h3>Салат с курицей и перцем</h3>
+          <img src="salat3.jpg"></img>
+          <p>270руб.<span>210г.</span></p>
+      </div>
+      <div style="clear:both;"></div>
+      <div class="salat">
+          <h3>Салат Цезарь с лососем</h3>
+          <img src="salat4.jpg"></img>
+          <p>390руб.<span>220г.</span></p>
+      </div>
+      <div class="salat">
+          <h3>Салат с бастурмой</h3>
+          <img src="salat5.jpg"></img>
+          <p>290руб.<span>240г.</span></p>
+      </div>
+      <div class="salat">
+          <h3>Суп-крем из порея</h3>
+          <img src="sup.jpg"></img>
+          <p>210руб.<span>220г.</span></p>
+      </div>
+  </body>

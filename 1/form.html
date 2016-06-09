@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8>
+  <title>Form</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    input:checked > p {
+      color: green;
+    }
+    
+    input:checked + p +p{
+     display:block;
+    }
+   
+   .submenu {
+            display: none;
+            position: absolute;
+            background: white;
+            margin: 0;
+            padding: 20px;
+            list-style: none;
+            border: 1px solid maroon;
+        }
+  </style>
+</head>
+
+<body>
+
+
+  <form name="chekboxes">
+    <label for="ch_color">1
+      <input type="checkbox" name="checkbox" id="ch_color" /><p class="red">показать меню</p><p class="submenu">греция<br/>болгария</p>
+   
+  </form>
+
+<!--
+  <form>
+    <label for="spisok"></label>
+    <input type="checkbox" id="spisok">...</input>
+    <ul class="submenu">
+      <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B5%D1%86%D0%B8%D1%8F">Греция</a></li>
+      <li><a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F">Испания</a></li>
+    </ul>
+
+  </form> -->
+</body>
+
+</html>

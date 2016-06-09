@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <title>Anketa</title>
+</head>
+
+<body>
+    <img src="radar.bmp">
+    <script type="text/javascript">
+        var speed = prompt('Какая к вас скорость', 'Скорость');
+        var max_speed = 40;
+
+
+        if (speed < max_speed + 10) {
+            alert("Счастливого пути")
+        }
+        else if (speed < max_speed + 20) {
+            alert("Вы привысили сокрость! Заплатите штраф 200 тыс")
+        }
+
+
+        else {
+            var povtorka = confirm("У вас были подобные нарушения в течение последнего года");
+            if (povtorka == true) {
+                alert ("Вы привысили сокрость! Заплатите штраф 400 тыс  и отдайте права");
+            }
+            else {
+                alert ("Вы привысили сокрость! Заплатите штраф 400 тыс  и отдайте права");
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/mobilyslider.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
 
     <meta charset=UTF-8>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -20,7 +23,7 @@
         
         .nav>li>a:focus,
         .nav>li>a:hover,
-        .price_list * {
+        .advantage_list {
             background-color: #db6561;
         }
         
@@ -28,7 +31,9 @@
             border-radius: 1px;
         }
         
-        .main img, .partner_list img, .trener_list img {
+        .main img,
+        .partner_list img,
+        .trener_list img {
             width: 100%;
         }
         
@@ -52,12 +57,11 @@
         }
         
         .price_list {
-            color: white;
             font-size: 90%;
         }
         
-        .price:first-child {
-            display: inline-block;
+        .price span:last-child {
+            font-size: 2em;
         }
         
         .price_list ul {
@@ -66,13 +70,15 @@
         }
         
         .price {
-            margin: 0;
-            height: 100%;
+            margin: 10px 0;
+            vertical-align: middle;
+            line-height: 1.5;
         }
-        
+        /*
         .price .glyphicon {
             margin: 25px 0;
         }
+        */
         
         .price span {
             display: block;
@@ -80,6 +86,10 @@
         
         .price_list h2 {
             text-align: center;
+        }
+        
+        .partner {
+            height: 200%;
         }
     </style>
 
@@ -121,36 +131,37 @@
         </div>
         <div class="row ">
             <div class="trener_list">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <img src="trener1.jpg">
                     <div class="trener_description ">
                         <h4>Макаренко Артем</h4>
-                        <span hidden-md>
+                        <span class="hidden-md">
                         Чемпион в абсолютной категории Кубка РБ 2014, действующий член "Международной Ассоциации Тренеров"
-                        </span></div>
+                        </span>
+                    </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <img src="trener2.jpg">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="clearfix visible-sm"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <img src="trener3.jpg">
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-sm-6 col-xs-12">
                     <img src="trener4.jpg">
                 </div>
-
+                <div class="clearfix"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="price_list">
 
-        <div class="price_list">
-
-            <div class="row">
                 <h2 class="price_header col-md-12 text-center">Цены</h2>
                 <div class=" col-md-4">
                     <div class="price col-md-4 col-xs-6 text-center">
                         <span class="glyphicon glyphicon-pencil "></span>
                         <span>РАЗОВОЕ ПОСЕЩЕНИЕ</span>
-                        <span>80.000</span>
+                        <span>8руб.</span>
                     </div>
                     <div class="col-md-8 col-xs-6">
                         <ul>
@@ -165,7 +176,8 @@
                     <div class="price col-md-4 col-xs-6 text-center">
                         <span class="glyphicon glyphicon-send text-center"></span>
                         <span>АБОНЕМЕНТ НА 12 ПОСЕЩЕНИЙ</span>
-                        <span>840.000</span></div>
+                        <span>84руб.</span>
+                    </div>
                     <div class="col-md-8 col-xs-6">
                         <ul>
                             <li><span class="glyphicon glyphicon-ok"></span> Бесплатная парковка</li>
@@ -180,7 +192,7 @@
                     <div class="price col-md-4 col-xs-6 text-center">
                         <span class="glyphicon glyphicon-briefcase text-center"></span>
                         <span>АНЛИМ НА МЕСЯЦ</span>
-                        <span>1.040.000</span>
+                        <span>104руб</span>
                     </div>
                     <div class="col-md-8 col-xs-6">
                         <ul>
@@ -194,8 +206,9 @@
                 </div>
             </div>
         </div>
-        <div class="advantage_list">
-            <div class="row">
+        <div class="row">
+            <div class="advantage_list">
+
                 <h2 class="advantage_header  col-md-12 text-center">IT<span>GYM</span> - сделай свое тело достойным своего духа!</h2>
                 <div class="col-md-3 col-sm-6">
                     <h6 class="text-center">СИЛОВОЙ ТРЕНИНГ</h6>
@@ -208,6 +221,7 @@
                     <div class="advantage_description ">
                         13 беговых дорожек, 5 эллипсоидов, 2 степпера, 3 велотренажера, 3 ЖК-телевизора</div>
                 </div>
+                <div class="clearfix visible-sm"></div>
                 <div class="col-md-3 col-sm-6">
                     <h6 class="text-center">БЕСПЛАТНАЯ ВОДА</h6>
                     <div class="advantage_description ">
@@ -221,21 +235,25 @@
                 </div>
             </div>
         </div>
-        <div class="partner_list hidden-xs">
-            <h2 class="text-center">НАШИ ПАРТНЕРЫ</h2>
-            <div class="partner col-md-3 col-sm-6 ">
-                <img src="partner1.png">
-            </div>
-            <div class="partner col-md-3 col-sm-6  ">
-                <img src="partner2.png">
-            </div>
-            <div class="partner col-md-3 col-sm-6 ">
-                <img src="partner3.png">
-            </div>
-            <div class="partner col-md-3 col-sm-6 ">
-                <img src="partner4.png">
+        <div class="row">
+            <div class="partner_list hidden-xs">
+                <h2 class="text-center">НАШИ ПАРТНЕРЫ</h2>
+                <div class="partner col-md-3 col-sm-6 ">
+                    <img src="partner1.png">
+                </div>
+                <div class="partner col-md-3 col-sm-6  ">
+                    <img src="partner2.png">
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <div class="partner col-md-3 col-sm-6 ">
+                    <img src="partner3.png">
+                </div>
+                <div class="partner col-md-3 col-sm-6 ">
+                    <img src="partner4.png">
+                </div>
             </div>
         </div>
+        
     </div>
 
 

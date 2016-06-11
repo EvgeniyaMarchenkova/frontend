@@ -14,13 +14,23 @@
         switch (speed < (max_speed + 10)) {
             case true:
                 alert("Счастливого пути");
+                break;
             case false:
-                switch (speed > (max_speed + 20))
-                    
-        
+                if (speed < max_speed + 20) {
+                    alert("Вы привысили сокрость! Заплатите штраф 200 тыс")
+                }
+                else {
+                    var povtorka = confirm("У вас были подобные нарушения в течение последнего года");
+                    if (povtorka == true) {
+                        alert("Вы привысили сокрость! Заплатите штраф 400 тыс  и отдайте права");
+                    }
+                    else {
+                        alert("Вы привысили сокрость! Заплатите штраф 400 тыс");
+                    }
 
 
-        }
+
+                }
     </script>
 
 </body>
